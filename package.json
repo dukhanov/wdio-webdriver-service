@@ -1,6 +1,6 @@
 {
   "name": "wdio-webdriver-service",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "WebdriverIO service to start & stop WebDriver component (geckodriver, chrome driver)",
   "main": "index.js",
   "scripts": {
