@@ -28,5 +28,6 @@ exports.config = {
     ],
     webDriverType: process.env.npm_config_driver_type || 'geckodriver',
     webDriverLogs: './',
-    webDriverArgs: []
+    webDriverArgs: [],
+    webDriverKillProcess: true
 }
