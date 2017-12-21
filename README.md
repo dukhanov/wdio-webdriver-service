@@ -63,6 +63,7 @@ export.config = {
   webDriverType: 'geckodriver',
   webDriverLogs: './',
   webDriverArgs: ['--silent'],
+  webDriverKillProcess: false, // to kill webdriver (chromedriver or geckodriver) process after complete, default true
 };
 ```
 
