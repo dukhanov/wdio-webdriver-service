@@ -15,8 +15,8 @@ exports.config = {
     baseUrl: 'http://webdriver.io',
 
     waitforTimeout: 10000,
-    connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
+    connectionRetryTimeout: 10000,
+    connectionRetryCount: 1,
 
     framework: 'mocha',
     mochaOpts: {
