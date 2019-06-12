@@ -5,10 +5,10 @@ var path = require('path')
 describe('webdriverio', function () {
     it('should run a test', function () {
         browser.url('/')
-        assert.equal(browser.getTitle(), 'WebdriverIO - WebDriver bindings for Node.js')
+        assert.equal(browser.getTitle(), 'WebdriverIO · Next-gen WebDriver test framework for Node.js')
 
         browser.click('a=API')
-        assert.equal(browser.getTitle(), 'WebdriverIO - API Docs')
+        assert.equal(browser.getTitle(), 'API Docs · WebdriverIO')
     })
 
     it('should have created a log file', function () {
