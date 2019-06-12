@@ -12,6 +12,9 @@
     "test:integration:chrome": "npm run test:integration --driver-type=chromedriver",
     "test:integration:firefox": "npm run test:integration --driver-type=geckodriver"
   },
+  "engines": {
+    "node": "<11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dukhanov/wdio-webdriver-service.git"
@@ -54,7 +57,7 @@
     "load-grunt-tasks": "^3.4.1",
     "mocha": "^2.5.3",
     "wdio-mocha-framework": "^0.6.4",
-    "webdriverio": "^4.14.0"
+    "webdriverio": "^4.14.4"
   },
   "contributors": [
     "Maxim Dukhanov <m.dukhanov@gmail.com>"
