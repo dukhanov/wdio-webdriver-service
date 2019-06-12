@@ -3,6 +3,10 @@ var fs = require('fs')
 var path = require('path')
 
 describe('webdriverio', function () {
+    before(() => {
+        //throw new Error('')
+    })
+
     it('should run a test', function () {
         browser.url('/')
         assert.equal(browser.getTitle(), 'WebdriverIO · Next-gen WebDriver test framework for Node.js')
