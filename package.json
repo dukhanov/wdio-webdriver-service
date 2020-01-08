@@ -1,20 +1,14 @@
 {
   "name": "wdio-webdriver-service",
-  "version": "0.1.8",
+  "version": "1.0.1",
   "description": "WebdriverIO service to start & stop WebDriver component (geckodriver, chrome driver)",
-  "main": "index.js",
+  "main": "./build",
   "scripts": {
-    "build": "grunt build",
-    "prepublish": "npm prune && npm run build",
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "mocha --compilers js:babel-register --recursive test/unit",
-    "test:integration": "npm run build && wdio test/integration/wdio.conf.js",
-    "test:integration:chrome": "npm run test:integration --driver-type=chromedriver",
-    "test:integration:firefox": "npm run test:integration --driver-type=geckodriver"
+    "build": "NODE_ENV=production run-s clean compile",
+    "clean": "rimraf ./build",
+    "compile": "babel lib/ -d build/ --config-file ./babel.config.js"
   },
-  "engines": {
-    "node": "<11.0"
-  },
+  "engines": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dukhanov/wdio-webdriver-service.git"
@@ -22,6 +16,7 @@
   "keywords": [
     "webdriverio",
     "wdio",
+    "wdio v5",
     "wdio-service",
     "chromedriver",
     "geckodriver",
@@ -41,27 +36,29 @@
     "fs-extra": "^0.30.0"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-register": "^6.7.2",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
+    "@babel/plugin-syntax-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-source-map-support": "^2.0.1",
     "chromedriver": "^76.0.0",
-    "eslint": "^2.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-standard": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-promise": "^1.1.0",
     "eslint-plugin-standard": "^1.3.2",
-    "geckodriver": "^1.16.2",
-    "grunt": "^1.0.4",
-    "grunt-babel": "^6.0.0",
-    "grunt-bump": "^0.6.0",
-    "grunt-cli": "^1.1.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "^18.0.0",
-    "grunt-npm": "0.0.2",
-    "load-grunt-tasks": "^3.4.1",
-    "mocha": "^2.5.3",
-    "wdio-mocha-framework": "^0.6.4",
-    "webdriverio": "^4.14.4"
+    "geckodriver": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3"
   },
   "contributors": [
     "Maxim Dukhanov <m.dukhanov@gmail.com>"

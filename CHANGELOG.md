@@ -1,3 +1,7 @@
+## Version 1.0.1
+
+Migrate to use webdriverio v5
+
 ## Version 0.1.7
 
 Updated:
