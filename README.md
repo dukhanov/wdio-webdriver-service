@@ -3,9 +3,9 @@ WDIO WebDriver Service
 
 ## WDIO v5 is now supported. Please update to v1.0.1
 
-```npm rm wdio-chromedriver-service --save-dev```
+```npm rm wdio-webdriver-service --save-dev```
 
-```npm i wdio-chromedriver-service@1.0.1 --save-dev```
+```npm i wdio-webdriver-service@1.0.1 --save-dev```
 
 
 (Based on [wdio-selenium-standalone-service](https://github.com/webdriverio/wdio-selenium-standalone-service))
