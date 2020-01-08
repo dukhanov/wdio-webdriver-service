@@ -1,7 +1,12 @@
 {
   "extends": "standard",
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "es6": true
   },
   "rules": {
     "indent": [
@@ -9,9 +14,6 @@
       4
     ],
     "space-before-function-paren": 0
-  },
-  "env": {
-    "es6": true
   },
   "globals": {}
 }
